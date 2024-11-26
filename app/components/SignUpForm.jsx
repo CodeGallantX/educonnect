@@ -46,7 +46,7 @@ const App = () => {
         </div>
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4'>
-          <fieldset className="flex flex-col w-full items-start justify-center gap-1">
+          <fieldset className="flex flex-col w-full items-start justify-center space-y-1">
             <label className='text-white' htmlFor="name">Name</label>
             <input
               className="w-full border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
@@ -60,7 +60,7 @@ const App = () => {
             />
           </fieldset>
 
-          <fieldset className="flex flex-col items-start justify-center gap-1">
+          <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
               className="w-full border border-solid py-4 px-6 rounded-full border-gray-500 bg-gray-800 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
@@ -73,14 +73,14 @@ const App = () => {
               required
             />
           </fieldset>
-          <fieldset className="flex flex-col items-start justify-center gap-1">
+          <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="password">Password</label>
             <input
-              className="w-full border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-lg border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="password"
               name="password"
               id="password"
-              placeholder='**********'
+              placeholder='***********'
               value={formData.password}
               onChange={handleChange}
               required
