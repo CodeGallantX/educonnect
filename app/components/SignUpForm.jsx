@@ -28,7 +28,7 @@ const App = () => {
     <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-screen overflow-hidden'>
       <div className="flex flex-col text-white space-y-3 px-16 lg:px-10 xl:px-32 py-20 lg:py-8">
         <h1 className='text-4xl font-bold text-center'>Create Account</h1>
-        <p className="text-gray-300">Join the community and unlock your learning potential</p>
+        <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
 
 
         <div className='mt-4'>
@@ -109,7 +109,7 @@ const App = () => {
       </div>
       <div className='hidden overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full bg-gradient-to-tr from-cyan-800 to-purple-900'>
         <div className='absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur'></div>
-        <div className='absolute text-white w-full bottom-1/3 left-1/2 -translate-x-1/2'>
+        <div className='absolute text-white w-full bottom-1/4 left-1/2 -translate-x-1/2'>
           <div className="flex flex-col space-y-4 items-center text-center px-8">
             <h1 className="text-4xl text-white">Ask Questions with Ease</h1>
             <blockquote className="text-2xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</blockquote>
