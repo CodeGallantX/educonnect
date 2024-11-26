@@ -76,11 +76,11 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="password">Password</label>
             <input
-              className="w-full placeholder:text-lg border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-xl border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="password"
               name="password"
               id="password"
-              placeholder='***********'
+              placeholder='******'
               value={formData.password}
               onChange={handleChange}
               required
@@ -88,7 +88,7 @@ const App = () => {
           </fieldset>
 
           <div className="flex flex-row items-center justify-between">
-            <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-row items-center space-x-2 ">
               <input
                 type="checkbox"
                 name="agree"
