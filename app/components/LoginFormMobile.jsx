@@ -62,7 +62,7 @@ const App = () => {
           <Link href="/forgot-password" className='underline text-right'>Forgot password?</Link>
           
           <Link href="/dashboard">
-            <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-lg' type="submit">
+            <button className='mt-2 w-full bg-primary text-white py-3 rounded-lg' type="submit">
               Sign in
             </button>
           </Link>
@@ -78,7 +78,7 @@ const App = () => {
             </Link>
           </div>
           <p className="text-white">Don&apos;t have an account yet? 
-            <Link href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link>
+            <Link href="/register" className='font-bold underline'>Sign up</Link>
           </p>
         </div>
       </div>
