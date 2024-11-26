@@ -25,10 +25,10 @@ const App = () => {
   };
 
   return (
-    <div className='lg:grid lg:grid-cols-2 bg-black w-full h-full overflow-hidden'>
+    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-full overflow-hidden'>
       <div className="flex flex-col text-white gap-3 px-16 lg:px-10 xl:px-32 py-20 lg:py-8">
         <h1 className='text-4xl font-bold text-center'>Create Account</h1>
-        <p>Join us </p>
+        <p className="text-gray-300">Join us </p>
         
 
         <div className='mt-4'>
@@ -38,7 +38,7 @@ const App = () => {
               <span>Continue with Google</span>
             </a>
           </div>
-          <div className='flex flex-row gap-5 items-center justify-center mb-2'>
+          <div className='flex flex-row gap-5 items-center justify-center my-2'>
             <span className='w-full h-[1px] bg-white'></span>
             <span className='text-lg font-semibold text-white'>Or</span>
             <span className='w-full h-[1px] bg-white'></span>
