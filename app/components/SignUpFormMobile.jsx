@@ -40,7 +40,7 @@ const App = () => {
           <fieldset className="flex flex-col w-full items-start justify-center space-y-1">
             <label className='text-white' htmlFor="name">Name</label>
             <input
-              className="w-full border border-solid py-4 px-6 rounded-lg bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:border-gray-300 transition-all duration-300 ease-in-out text-white"
               type="text"
               name="name"
               id="name"
@@ -54,7 +54,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
-              className="w-full border border-solid py-4 px-6 rounded-lg border-gray-500 bg-gray-800 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full border border-solid p-4 rounded-lg border-gray-500 bg-gray-800 outline-none focus:border-300-gray transition-all duration-300 ease-in-out text-white"
               type="email"
               name="email"
               id="email"
@@ -67,7 +67,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="password">Password</label>
             <input
-              className="w-full placeholder:text-2xl font-light border border-solid py-4 px-6 rounded-lg bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="password"
               name="password"
               id="password"
@@ -91,15 +91,14 @@ const App = () => {
             </div>
           </div>
           <Link href="/dashboard">
-            <button className='mt-6 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-[36px]' type="submit">
+            <button className='mt-6 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-lg' type="submit">
               Sign Up
             </button>
           </Link>
-          <p className="text-white">Already have an account? <Link href="/login" className='font-bold underline transition duration-300 ease-in-out'>Log in</Link></p>
         </form>
 
       </div>
-      <div>
+      <div className="mt-6 flex flex-col space-y-3">
           <div className="flex flex-row items-center justify-center space-x-6">
             <Link href="#">
               <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={22} height={22} />
@@ -108,7 +107,7 @@ const App = () => {
               <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Apple_logo_grey.svg.png?updatedAt=1727884280423" alt="Apple Icon" width={22} height={22} />
             </Link>
           </div>
-          <p className="text-white">Don&apos;t have an account yet? 
+          <p className="text-white text-center">Already have an account? 
             <Link href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link>
           </p>
         </div>

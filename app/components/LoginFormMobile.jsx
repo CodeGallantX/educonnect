@@ -35,7 +35,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
-              className="w-full border border-solid py-4 px-6 rounded-lg border-gray-500 bg-gray-800 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full border border-solid p-4 rounded-lg border-gray-500 bg-gray-800 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="email"
               name="email"
               id="email"
@@ -48,7 +48,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="password">Password</label>
             <input
-              className="w-full placeholder:text-2xl font-light border border-solid py-4 px-6 rounded-lg bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="password"
               name="password"
               id="password"
@@ -59,7 +59,7 @@ const App = () => {
             />
           </fieldset>
 
-          <Link href="/forgot-password" className='underline'>Forgot password?</Link>
+          <Link href="/forgot-password" className='underline text-right'>Forgot password?</Link>
           
           <Link href="/dashboard">
             <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-lg' type="submit">
@@ -68,7 +68,7 @@ const App = () => {
           </Link>
         </form>
 
-        <div>
+        <div className="mt-6 flex flex-col space-y-3">
           <div className="flex flex-row items-center justify-center space-x-6">
             <Link href="#">
               <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={22} height={22} />
