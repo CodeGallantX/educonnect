@@ -76,11 +76,11 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="password">Password</label>
             <input
-              className="w-full placeholder:text-yellow-500 border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-2xl font-light border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="password"
               name="password"
               id="password"
-              placeholder='******'
+              placeholder='⁎⁎⁎⁎⁎⁎⁎⁎'
               value={formData.password}
               onChange={handleChange}
               required
@@ -99,10 +99,11 @@ const App = () => {
               <label htmlFor="agree" className="text-white">I agree to all the <a className="font-bold underline">terms and conditions</a>.</label>
             </div>
           </div>
-
-          <button className='mt-6 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-[36px]' type="submit">
-            Sign Up
-          </button>
+          <Link href="/dashboard">
+            <button className='mt-6 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-[36px]' type="submit">
+              Sign Up
+            </button>
+          </Link>
           <p className="text-white">Already have an account? <Link href="/login" className='font-bold underline transition duration-300 ease-in-out'>Log in</Link></p>
         </form>
 
