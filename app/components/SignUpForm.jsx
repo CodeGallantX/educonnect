@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-screen overflow-hidden'>
-      <div className="flex flex-col text-white space-y-3 px-16 lg:px-10 xl:px-32 py-20 lg:py-8">
+      <div className="flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-10 lg:py-8">
         <h1 className='text-4xl font-bold text-center'>Create Account</h1>
         <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
 
@@ -76,7 +76,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="password">Password</label>
             <input
-              className="w-full placeholder:text-xl border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-yellow-500 border border-solid py-4 px-6 rounded-full bg-gray-800 border-gray-500 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
               type="password"
               name="password"
               id="password"
