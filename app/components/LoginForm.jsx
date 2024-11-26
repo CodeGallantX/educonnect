@@ -24,13 +24,13 @@ const App = () => {
   };
 
   return (
-    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-screen overflow-hidden'>
-      <div className="flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-10 lg:py-8">
+    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full min-h-screen overflow-hidden'>
+      <div className="flex flex-col text-white space-y-3 items-center justify-center px-10 md:px-16 lg:px-10 xl:px-24 w-full">
         <h1 className='text-4xl font-bold text-center'>Login</h1>
         <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
 
 
-        <div className='mt-4'>
+        <div className='mt-4 w-full'>
           <div className="flex flex-col items-center justify-center space-y-4">
             <a href="#" className="w-full flex flex-row items-center justify-center space-x-2 hover:bg-gray-800 px-2 py-3 rounded-full bg-transparent border border-solid border-blue-500">
               <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={20} height={20} />
@@ -46,7 +46,7 @@ const App = () => {
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4'>
 
-          <fieldset className="flex flex-col items-start justify-center space-y-1">
+          <fieldset className="flex flex-col items-start justify-center w-full space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
               className="w-full border border-solid py-4 px-6 rounded-full border-gray-500 bg-gray-800 outline-none focus:ring-1 focus:ring-gray-300 focus:border-none transition-all duration-300 ease-in-out text-white"
