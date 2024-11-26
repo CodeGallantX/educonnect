@@ -68,7 +68,7 @@ const App = () => {
           </Link>
         </form>
 
-        <div className="mt-6 flex flex-col space-y-3">
+        <div className="mt-4 flex flex-col space-y-3">
           <div className="flex flex-row items-center justify-center space-x-6">
             <Link href="#">
               <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={22} height={22} />
