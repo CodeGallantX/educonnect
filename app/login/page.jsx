@@ -1,14 +1,14 @@
-import SignUpForm from '../components/SignUpForm';
-import SignUpFormMobile from '../components/SignUpFormMobile';
+import LoginForm from '../components/LoginForm';
+import LoginFormMobile from '../components/LoginFormMobile';
 
 const App = () => {
   return (
     <>
     <div className="hidden sm:block">
-      <SignUpForm />
+      <LoginForm />
     </div>
     <div className="block sm:hidden">
-      <SignUpFormMobile />
+      <LoginFormMobile />
     </div>
     </>
   );

@@ -1,13 +1,14 @@
 import SignUpForm from './components/SignUpForm';
+import Onboarding from './components/Onboarding';
 
 const App = () => {
   return (
     <>
-    <div className="">
+    <div className="hidden sm:block">
       <SignUpForm />
     </div>
-    <div>
-      {/* <SignUpFormMobile /> */}
+    <div className="block sm:hidden">
+      <Onboarding />
     </div>
     </>
   );
