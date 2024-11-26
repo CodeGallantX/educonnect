@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-screen overflow-hidden'>
       <div className="relative flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-10 lg:py-8">
-        <h1 className='text-3xl font-bold text-center'>Register To Start Your Journey To EduConnect Today</h1>
+        <h1 className='text-3xl font-bold text-left'>Register To Start Your Journey To EduConnect Today</h1>
 
         {/* <Link href="/">
             <BackArrow className="absolute left-0 top-0 text-white font-bold"/>
@@ -84,24 +84,13 @@ const App = () => {
               type="password"
               name="confirmPassword"
               id="confirmPassword"
-              placeholder=''
+          
+              placeholder='⁎⁎⁎⁎⁎⁎⁎⁎'
               value={formData.confirmpassword}
               onChange={handleChange}
               required
             />
           </fieldset>
-
-          <div className="flex flex-row items-center justify-between">
-            <div className="flex flex-row items-center space-x-2 ">
-              <input
-                type="checkbox"
-                name="agree"
-                id="agree"
-                checked={formData.agree}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
           <Link href="/dashboard">
             <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-lg' type="submit">
               Register

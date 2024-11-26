@@ -77,7 +77,7 @@ const App = () => {
               <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Apple_logo_grey.svg.png?updatedAt=1727884280423" alt="Apple Icon" width={22} height={22} />
             </Link>
           </div>
-          <p className="text-white">Don&apos;t have an account yet? 
+          <p className="text-white">Don&apos;t have an account yet? {" "}
             <Link href="/register" className='font-bold underline'>Sign up</Link>
           </p>
         </div>
