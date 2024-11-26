@@ -36,20 +36,6 @@ const App = () => {
             <BackArrow className="absolute left-0 top-0 text-white font-bold"/>
         </Link> */}
 
-        <div className='mt-8'>
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <a href="#" className="w-full flex flex-row items-center justify-center space-x-2 hover:bg-gray-800 px-2 py-3 rounded-lg bg-transparent border border-solid border-blue-500">
-              <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={20} height={20} />
-              <span>Sign up with Google</span>
-            </a>
-          </div>
-          <div className='flex flex-row space-x-5 items-center justify-center my-2'>
-            <span className='w-full h-[1px] bg-white'></span>
-            <span className='text-lg font-semibold text-white'>Or</span>
-            <span className='w-full h-[1px] bg-white'></span>
-          </div>
-        </div>
-
         <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4'>
           <fieldset className="flex flex-col w-full items-start justify-center space-y-1">
             <label className='text-white' htmlFor="name">Name</label>
@@ -113,15 +99,19 @@ const App = () => {
         </form>
 
       </div>
-      <div className='hidden overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full bg-gradient-to-tr from-cyan-800 to-purple-900'>
-        <div className='absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur'></div>
-        <div className='absolute text-white w-full bottom-1/4 left-1/2 -translate-x-1/2'>
-          <div className="flex flex-col space-y-4 items-center text-center px-8">
-            <h1 className="text-4xl text-white">Ask Questions with Ease</h1>
-            <blockquote className="text-2xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</blockquote>
+      <div>
+          <div className="flex flex-row items-center justify-center space-x-6">
+            <Link href="#">
+              <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={22} height={22} />
+            </Link>
+            <Link href="#">
+              <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Apple_logo_grey.svg.png?updatedAt=1727884280423" alt="Apple Icon" width={22} height={22} />
+            </Link>
           </div>
+          <p className="text-white">Don&apos;t have an account yet? 
+            <Link href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link>
+          </p>
         </div>
-      </div>
     </div>
   );
 };
