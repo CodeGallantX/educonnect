@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
+
 const App = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-screen overflow-hidden'>
+    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full min-h-screen'>
       <div className="w-full flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-10 lg:py-8">
         <h1 className='text-4xl font-bold text-center'>Create Account</h1>
         <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
