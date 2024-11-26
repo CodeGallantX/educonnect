@@ -44,8 +44,7 @@ const App = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4'>
-
+        <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4 mt-4'>
           <fieldset className="flex flex-col items-start justify-center w-full space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
@@ -73,21 +72,9 @@ const App = () => {
             />
           </fieldset>
 
-          <div className="flex flex-row items-center justify-between">
-            <div className="flex flex-row items-center space-x-2 ">
-              <input
-                type="checkbox"
-                name="agree"
-                id="agree"
-                checked={formData.agree}
-                onChange={handleChange}
-              />
-              <label htmlFor="agree" className="text-white">I agree to all the <a className="font-bold underline">terms and conditions</a>.</label>
-            </div>
-          </div>
           <Link href="/dashboard">
-            <button className='mt-6 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-[36px]' type="submit">
-              Sign Up
+            <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
+              Log in
             </button>
           </Link>
           <p className="text-white">Don&apos;t have an account? <Link href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link></p>
@@ -99,7 +86,7 @@ const App = () => {
         <div className='absolute text-white w-full bottom-1/4 left-1/2 -translate-x-1/2'>
           <div className="flex flex-col space-y-4 items-center text-center px-8">
             <h1 className="text-4xl text-white">Ask Questions with Ease</h1>
-            <blockquote className="text-2xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</blockquote>
+            <p className="text-xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</p>
           </div>
         </div>
       </div>

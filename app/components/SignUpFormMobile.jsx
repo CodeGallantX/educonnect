@@ -28,15 +28,15 @@ const App = () => {
   };
 
   return (
-    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full h-screen overflow-hidden'>
-      <div className="relative flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-10 lg:py-8">
+    <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full min-h-screen'>
+      <div className="relative flex flex-col text-white px-10 md:px-16 lg:px-10 xl:px-32 py-14 lg:py-10">
         <h1 className='text-3xl font-bold text-left'>Register To Start Your Journey To EduConnect Today</h1>
 
         {/* <Link href="/">
             <BackArrow className="absolute left-0 top-0 text-white font-bold"/>
         </Link> */}
 
-        <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4'>
+        <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4 mt-10'>
           <fieldset className="flex flex-col w-full items-start justify-center space-y-1">
             <label className='text-white' htmlFor="name">Name</label>
             <input
@@ -80,7 +80,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='text-white' htmlFor="confirmPassword">Confirm Password</label>
             <input
-              className="w-full font-light border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:border-300-gray transition-all duration-300 ease-in-out text-white"
+              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:border-300-gray transition-all duration-300 ease-in-out text-white"
               type="password"
               name="confirmPassword"
               id="confirmPassword"
