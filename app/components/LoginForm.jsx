@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div className='lg:grid lg:grid-cols-2 bg-gray-800 w-full min-h-screen overflow-hidden'>
-      <div className="flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-24 mx-auto">
+      <div className="flex flex-col text-white space-y-3 px-10 md:px-16 lg:px-10 xl:px-24 py-16">
         <h1 className='text-4xl font-bold text-center'>Login</h1>
         <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
 
