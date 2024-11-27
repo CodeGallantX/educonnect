@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-// import BackArrow from 'react-icons/fa6';
+import { FaAngleLeft } from "react-icons/fa6";
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -29,12 +29,12 @@ const App = () => {
 
   return (
     <div className='lg:grid lg:grid-cols-2 light:bg-gray-200 dark:bg-gray-800 w-full min-h-screen'>
-      <div className="relative flex flex-col  px-10 md:px-16 lg:px-10 xl:px-32 py-14 lg:py-10">
+      <div className="relative flex flex-col px-10 md:px-16 lg:px-10 xl:px-32 pb-10 pt-20">
         <h1 className='text-3xl font-bold text-left light:text-gray-800 dark:text-white'>Register To Start Your Journey To EduConnect Today</h1>
 
-        {/* <Link href="/">
-            <BackArrow className="absolute left-0 top-0  font-bold"/>
-        </Link> */}
+        <Link href="/">
+            <FaAngleLeft className="absolute left-9 top-3 p-2 bg-gray-700 rounded-full text-5xl text-white font-bold"/>
+        </Link>
 
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
           <fieldset className="flex flex-col w-full  items-start justify-center space-y-1">
