@@ -1,6 +1,5 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import ThemeToggle from './components/ThemeToggle';
 
 const manrope = localFont({
   src: "./fonts/Manrope-VariableFont_wght.ttf",
@@ -65,7 +64,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <body className={`${manrope.variable} antialiased`}>
-      <ThemeToggle/>
         {children}
         </body>
     </html>
