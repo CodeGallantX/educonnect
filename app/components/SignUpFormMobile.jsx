@@ -91,7 +91,7 @@ const App = () => {
               required
             />
           </fieldset>
-          <Link href="/dashboard">
+          <Link href="/email-verification">
             <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-lg' type="submit">
               Register
             </button>
