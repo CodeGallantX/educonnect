@@ -33,7 +33,7 @@ const App = () => {
         <h1 className='text-3xl font-bold text-left light:text-gray-800 dark:text-white'>Register To Start Your Journey To EduConnect Today</h1>
 
         <Link href="/">
-            <FaAngleLeft className="absolute left-9 top-3 p-2 bg-gray-700 rounded-full text-5xl text-white font-bold"/>
+            <FaAngleLeft className="absolute left-9 top-4 p-2 bg-gray-700 rounded-full text-4xl text-white font-bold"/>
         </Link>
 
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
