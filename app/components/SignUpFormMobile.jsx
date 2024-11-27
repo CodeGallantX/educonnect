@@ -40,7 +40,7 @@ const App = () => {
           <fieldset className="flex flex-col w-full  items-start justify-center space-y-1">
             <label className='' htmlFor="name">Name</label>
             <input
-              className="w-full border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:border-gray-300 transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
+              className="w-full border border-solid p-4 rounded-lg light:bg-gray-200 dark:bg-gray-800 border-gray-500 outline-none light:focus:border-primary dark:focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="text"
               name="name"
               id="name"
@@ -54,7 +54,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='' htmlFor="email">Email Address</label>
             <input
-              className="w-full border border-solid p-4 rounded-lg border-gray-500 bg-gray-800 outline-none focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
+              className="w-full border border-solid p-4 rounded-lg border-gray-500 light:bg-gray-200 dark:bg-gray-800 outline-none light:focus:border-primary dark:focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="email"
               name="email"
               id="email"
@@ -67,7 +67,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='' htmlFor="password">Password</label>
             <input
-              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
+              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg light:bg-gray-200 dark:bg-gray-800 border-gray-500 outline-none light:focus:border-primary dark:focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="password"
               name="password"
               id="password"
@@ -80,7 +80,7 @@ const App = () => {
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label className='' htmlFor="confirmPassword">Confirm Password</label>
             <input
-              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg bg-gray-800 border-gray-500 outline-none focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
+              className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg light:bg-gray-200 dark:bg-gray-800 border-gray-500 outline-none light:focus:border-primary dark:focus:border-300-gray transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="password"
               name="confirmPassword"
               id="confirmPassword"
@@ -91,7 +91,7 @@ const App = () => {
               required
             />
           </fieldset>
-          <Link href="/email-verification" className="mt-1">
+          <Link href="/email-verification" className="mt-3">
             <button className='w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-lg' type="submit">
               Register
             </button>
