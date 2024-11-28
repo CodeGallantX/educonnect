@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaAngleLeft } from "react-icons/fa6";
 
 const EmailVerification = () => {
-  const [otp, setOtp] = React.useState(["", "", "", "", "", ""]);
+  const [otp, setOtp] = React.useState(["", "", "", "", ""]);
 
   const handleChange = (e, index) => {
     const value = e.target.value;

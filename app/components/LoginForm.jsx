@@ -72,11 +72,11 @@ const App = () => {
             />
           </fieldset>
 
-          <Link href="/dashboard">
-            <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
+          <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
+            <Link href="/home">
               Log in
-            </button>
-          </Link>
+            </Link>
+          </button>
           <p className="text-white">Don&apos;t have an account? <Link href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link></p>
         </form>
 
