@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import { FaAngleLeft } from "react-icons/fa6";
 
 const EmailVerification = () => {
   const [otp, setOtp] = React.useState(["", "", "", "", "", ""]);
@@ -27,6 +28,10 @@ const EmailVerification = () => {
     <div className='light:bg-gray-100 dark:bg-gray-800 w-full min-h-screen'>
       <div className="relative flex flex-col px-10 md:px-16 lg:px-10 xl:px-32 py-12 lg:py-8">
         <h1 className='text-2xl font-bold text-left dark:text-white light:text-gray-800'>Enter the verification code we sent to your email.</h1>
+
+        <Link href="/">
+            <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold"/>
+        </Link>
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-4 mt-14'>
           <fieldset className="flex flex-col items-start justify-center space-y-3">

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Link from 'next/link';
-// import BackArrow from 'react-icons/fa6';
+import { FaAngleLeft } from "react-icons/fa6";
 
 const ResetPassword = () => {
   const [formData, setFormData] = useState({

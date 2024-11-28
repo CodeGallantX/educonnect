@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaAngleLeft } from "react-icons/fa6";
+
 const App = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -29,6 +31,10 @@ const App = () => {
         <div className="mb-6 light:text-gray-800 dark:text-white">
         <h1 className='text-3xl font-bold text-left'>Welcome back! Continue your Learning Journey</h1>
         </div>
+
+        <Link href="/">
+            <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold"/>
+        </Link>
 
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
 
