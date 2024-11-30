@@ -12,7 +12,7 @@ const App = () => {
         <div>
           <LeftPane />
         </div>
-        <div className="col-span-4 flex flex-col items-start justify-center space-y-4">
+        <div className="col-span-4 flex flex-col items-start justify-start space-y-4">
           <PostBox />
           <SubjectSlider />
         </div>
