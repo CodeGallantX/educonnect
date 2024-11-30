@@ -60,9 +60,9 @@ const PostCard = () => {
                     <p className="text-sm mt-2">{question.answer}</p>
                     <div className="flex flex-row items-center justify-start space-x-6 mt-4">
                         <div className="flex flex-row bg-gray-700 rounded-full px-4 py-2">
-                            <div className="flex items-center space-x-2 cursor-pointer border-r border-r-gray-500">
+                            <div className="flex items-center space-x-2 cursor-pointer border-r-2 border-r-gray-500 pr-3">
                                 <span
-                                    className={`flex flex-row items-center space-x-2 ${votes[index].upvoted ? "text-blue-500" : "text-gray-400"
+                                    className={`flex flex-row items-center space-x-1 ${votes[index].upvoted ? "text-blue-300" : "text-gray-200"
                                         }`}
                                     onClick={() => handleUpvote(index)}
                                 >
@@ -76,7 +76,7 @@ const PostCard = () => {
                             </div>
 
                             <div
-                                className={`flex items-center space-x-2 cursor-pointer ${votes[index].downvoted ? "text-red-500" : "text-gray-400"
+                                className={`flex items-center space-x-2 cursor-pointer ml-2 ${votes[index].downvoted ? "text-red-400" : "text-gray-200"
                                     }`}
                                 onClick={() => handleDownvote(index)}
                             >
@@ -84,14 +84,14 @@ const PostCard = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-2 cursor-pointer text-gray-400">
+                        <div className="flex items-center space-x-2 cursor-pointer text-gray-200">
                             <FaRegComments className="text-lg" />
-                            <span>{question.comments} Comments</span>
+                            <span>{question.comments}</span>
                         </div>
 
-                        <div className="flex items-center space-x-2 cursor-pointer text-gray-400">
+                        <div className="flex items-center space-x-2 cursor-pointer text-gray-200">
                             <FaArrowUpFromBracket className="text-lg" />
-                            <span>{question.uploads} Shares</span>
+                            <span>{question.uploads}</span>
                         </div>
                     </div>
                 </div>
