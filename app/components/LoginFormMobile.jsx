@@ -67,7 +67,7 @@ const App = () => {
 
           <Link href="/forgot-password" className='underline text-right text-sm'>Forgot password?</Link>
           
-          <Link href="/dashboard">
+          <Link href="/home">
             <button className='mt-2 w-full bg-primary text-white py-3 rounded-lg' type="submit">
               Sign in
             </button>

@@ -1,51 +1,56 @@
-"use client"
-// import Image from 'next/image';
+"use client";
+
 import Link from 'next/link';
 import { FaRegBell } from "react-icons/fa6";
 import { PiHouseBold, PiNotePencilBold, PiGlobeBold } from "react-icons/pi";
 import { IoGridOutline } from "react-icons/io5";
 
-
 const Header = () => {
     return (
-        <header className="flex flex-row items-center justify-between py-6 px-10 lg:px-16 xl:px-24">
-            <div>
-                <img src="/logo.png" alt="logo" className="w-52 h-auto" />
+        <header className="flex flex-wrap items-center justify-between space-x-10 py-4 px-4 md:px-6 lg:px-16 xl:px-24 bg-white bg-gray-900">
+            <div className="flex-shrink-0 w-32 md:w-52">
+                <img src="/logo.png" alt="Logo" className="w-full h-auto object-contain" />
             </div>
-            <div className="flex flex-row space-x-6">
-                <Link href="/home">
-                    <PiHouseBold className="text-gray-400 text-2xl" />
+            <nav className="hidden sm:flex space-x-5 ml-auto">
+                <Link href="/home" className="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                    <PiHouseBold className="text-2xl" />
                 </Link>
-                <Link href="/post">
-                    <PiNotePencilBold className="text-gray-400 text-2xl" />
+                <Link href="/post" className="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                    <PiNotePencilBold className="text-2xl" />
+                </Link>
+                <Link href="/community" className="text-gray-400 hover:text-gray-600 dark:hover:text-white">
+                    <IoGridOutline className="text-2xl" />
+                </Link>
+            </nav>
+            <div className="flex-grow mx-4 md:mx-6">
+                <input
+                    type="search"
+                    id="searchBox"
+                    className="w-full max-w-lg rounded-md py-2 px-4 text-gray-600 dark:text-white text-sm bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Search..."
+                />
+            </div>
+            <div className="flex items-center space-x-4">
+                <img
+                    src="/profile.png"
+                    alt="Profile"
+                    className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover"
+                />
+                <Link href="#" className='relative w-full'>
+                    <FaRegBell className="text-gray-400 hover:text-gray-600 dark:hover:text-white text-xl md:text-2xl" />
+                    <span className="absolute text-[11px] -top-2 -right-2 rounded-full py-0.5 px-2 bg-red-500 text-white">3</span>
                 </Link>
                 <Link href="/community">
-                    <IoGridOutline className="text-gray-400 text-2xl" />
+                    <PiGlobeBold className="text-gray-400 hover:text-gray-600 dark:hover:text-white text-xl md:text-2xl" />
                 </Link>
             </div>
-            <div className="w-full">
-                <input type="text" name="search" id="searchBox"
-                    className="rounded-md py-2 px-4 w-full light:text-gray-500 dark:text-white text-sm light:bg-gray-200 dark:bg-gray-800 outline-none border border-solid border-gray-500 light:focus:border-gray-600 dark:focus:border-gray-300"
-                    placeholder='Search...' />
-            </div>
-            <div className="flex flex-row space-x-3 items-center justify-center">
-            <div>
-                <img src="profile.png" alt="profile" className="w-32 h-auto rounded-full" />
-            </div>
-            <a href="#">
-                <FaRegBell className="text-gray-400 text-2xl" />
-            </a>
-            <Link href="/community">
-                <PiGlobeBold className="text-gray-400 text-2xl" />
-            </Link>
-            <Link href="/community">
-                <button className="rounded-full py-3 px-8 text-white bg-primary">
+            <Link href="/edit-profile">
+                <button className="hidden sm:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition">
                     Edit Profile
                 </button>
             </Link>
-            </div>
         </header>
-    )
-}
+    );
+};
 
 export default Header;

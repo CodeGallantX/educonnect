@@ -101,7 +101,7 @@ const App = () => {
               <label htmlFor="agree" className="text-white">I agree to all the <a className="font-bold underline">terms and conditions</a>.</label>
             </div>
           </div>
-          <Link href="/dashboard">
+          <Link href="/home">
             <button className='mt-6 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-[36px]' type="submit">
               Sign Up
             </button>
