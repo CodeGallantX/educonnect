@@ -3,7 +3,7 @@ import subjects from '/data/subjects.json'
 
 const SubjectSlider = () => {
     return (
-        <div className="flex flex-row w-full items-start justify-center space-x-4 bg-gray-900 p-2 rounded-lg">
+        <div className="flex flex-row w-full items-start justify-center space-x-4 bg-gray-900 p-4 rounded-lg">
             {subjects.map((subject, index) => (
                 <div key={index}>
                     <a href={subject.url} className="flex flex-col items-center justify-center w-full space-y-2">
