@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import LeftPane from '../components/LeftPane';
 import PostBox from '../components/PostBox';
 import SubjectSlider from '../components/SubjectSlider';
+import PostCard from '../components/PostCard';
 import RightPane from '../components/RightPane';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <div className="col-span-4 flex flex-col items-start justify-start space-y-4">
           <PostBox />
           <SubjectSlider />
+          <PostCard />
         </div>
         <div className="col-span-2">
           <RightPane />
