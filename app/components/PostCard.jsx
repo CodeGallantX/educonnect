@@ -3,15 +3,19 @@ import questions from '/data/questions.json'
 
 const PostCard = () => {
     return (
-        <div className="flex flex-row w-full items-start justify-center space-x-4 bg-gray-900 p-2 rounded-lg">
+        <div className="flex flex-col w-full items-start justify-center space-y-4">
             {questions.map((question, index) => (
                 <div key={index}>
-                    <div className="flex flex-col items-center justify-center w-full space-y-2">
-                        <h3 className="text-white text-sm">{question.topic}</h3>
-                        <span className="text-sm">{question.suject}</span>
-                        <p>{question.answer}</p>
-                        
-                        <h4 className="text-white text-sm">{question.name}</h4>
+                    <div className="bg-gray-900 text-white p-2 rounded-lg flex flex-col items-start justify-center w-full space-y-2">
+                        <h3 className="text-xl font-semibold">{question.topic}</h3>
+                        <span className="text-sm font-semibold">{question.subject}</span>
+                        <p className="text-sm">{question.answer}</p>
+                        <div>
+                            <button className="bg-gray-800 text-white p-2 rounded-full">
+
+                                <span>Upvote</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             ))}
