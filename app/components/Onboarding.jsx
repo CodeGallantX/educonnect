@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Onboarding = () => {
     return (
-        <div className="min-h-screen flex flex-col items-start justify-end space-y-8 light:bg-gray-200 dark:bg-gray-800 p-6">
+        <div className="min-h-[100vh] flex flex-col items-start justify-end space-y-8 light:bg-gray-200 dark:bg-gray-800 p-6">
             <div className='relative h-full w-full flex flex-col items-start justify-end'>
                 {/* <div className='absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur'></div> */}
                 <div className='absolute w-full left-1/2 -translate-x-1/2'>

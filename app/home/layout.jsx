@@ -12,7 +12,7 @@ export const metadata = {
   description: "Join EduConnect to ask and answer questions, share knowledge, and collaborate with students across Africa.",
   keywords: "EduConnect, sign up, student learning, collaborative platform, peer-to-peer learning, ask questions, share knowledge, African students, STEM education, academic community",
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
+  // viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Sign Up - EduConnect",
     description: "Create an account on EduConnect and start collaborating with fellow students to learn and grow academically.",

@@ -1,0 +1,32 @@
+[
+    {
+        "url": "url",
+        "img": "/wallpaper.png",
+        "name": "Community of Artists"
+    },
+    {
+        "url": "url",
+        "img": "/wallpaper.png",
+        "name": "WAEC Preps Community"
+    },
+    {
+        "url": "url",
+        "img": "/wallpaper.png",
+        "name": "Mathematicians of Tomorrow"
+    },
+    {
+        "url": "url",
+        "img": "/wallpaper.png",
+        "name": "JavaScript Titans"
+    },
+    {
+        "url": "url",
+        "img": "/wallpaper.png",
+        "name": "Mobile Dev Association"
+    },
+    {
+        "url": "url",
+        "img": "/wallpaper.png",
+        "name": "Young Einsteins"
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "topic": "What is the Pythagorean theorem?",
+        "subject": "Mathematics",
+        "answer": "The Pythagorean Theorem states that in a right-angled triange, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. Mathematically, it is expressed as a2 + b2 = c2a^2 + b^2 = c^2a2 + b2 = c2, where ccc is the hypotenuse.",
+        "comments": "103",
+        "uploads": "50"
+    },
+    {
+        "topic": "How many cells does the human body have?",
+        "subject": "Biology",
+        "answer": "The human body is made up of approxiamtely 37.2 trillion cells, each uniquely specialized to perform different functions. From carrying oxygen through the blood by transmitting signals in the brain, these cells work together in harmony to sustain life, repair damage, and maintain the body's vital systems.",
+        "comments": "52",
+        "uploads": "10"
+    }
+]
