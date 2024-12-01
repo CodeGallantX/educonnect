@@ -30,7 +30,7 @@ const NotificationPane = () => {
           {notifications.map((notification) => (
             <li
               key={notification.id}
-              className={`flex items-center justify-between p-3 rounded-lg ${
+              className={`flex items-center justify-between p-3 rounded-lg text-sm${
                 notification.isRead
                   ? "bg-gray-700 text-gray-400"
                   : "bg-gray-800 text-white"

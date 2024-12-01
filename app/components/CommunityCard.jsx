@@ -23,7 +23,7 @@ const CommunityCard = () => {
                 alt={community.name || "Community"}
                 className="min-w-12 min-h-12 max-w-14 max-h-14 rounded-lg object-cover"
               />
-              <span className="absolute w-2 h-2 rounded-full bg-red-500"></span>
+              <span className="absolute w-2 h-2 -top-0.5 -right-0.5 rounded-full bg-red-500"></span>
             </div>
             <h4 className="text-white text-sm">{community.name}</h4>
           </Link>
