@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex flex-wrap items-center justify-between space-x-10 py-4 px-4 md:px-6 lg:px-16 xl:px-24 bg-gray-900 relative">
+      <header className="flex flex-wrap items-center justify-between space-x-10 py-4 px-4 md:px-6 lg:px-10 xl:px-24 bg-gray-900 relative">
         <div className="flex-shrink-0 w-32 md:w-52">
           <img
             src="/logo.png"
@@ -52,7 +52,7 @@ const Header = () => {
             placeholder="Search..."
           />
         </div>
-        <div className="flex items-center space-x-6">
+        <div className="flex flex-row-reverse lg:flex-row items-center justify-center space-x-6">
           <ProfilePic />
           <div className="relative">
             <button
@@ -74,10 +74,8 @@ const Header = () => {
             <PiGlobeBold className="text-gray-400 hover:text-gray-600 hover:text-white text-2xl md:text-2xl" />
           </Link>
         </div>
-        <Link href="/edit-profile" className="outline-none">
-          <button className="hidden sm:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
+        <Link href="/edit-profile" className="outline-none hidden sm:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
             Edit Profile
-          </button>
         </Link>
       </header>
     </>

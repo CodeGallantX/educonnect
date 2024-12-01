@@ -23,15 +23,5 @@
         "url": "url",
         "thumbnail": "/wallpaper.png",
         "name": "Government"
-    },
-    {
-        "url": "url",
-        "thumbnail": "/wallpaper.png",
-        "name": "Basic Science"
-    },
-    {
-        "url": "url",
-        "thumbnail": "/wallpaper.png",
-        "name": "Geography"
     }
 ]

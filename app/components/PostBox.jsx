@@ -1,11 +1,24 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ProfilePic from "./ProfilePic";
 import { FaImage, FaCode, FaMarkdown, FaPaperPlane } from "react-icons/fa";
 
 const PostBox = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState(null);
+  const [image, setImage] = useState(null);
+  const fileInputRef = useRef(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <div className="w-full p-4 rounded-lg light:bg-gray-400 dark:bg-gray-900">
@@ -19,7 +32,7 @@ const PostBox = () => {
             placeholder="What do you want to ask or answer?"
             onFocus={() => setIsFocused(true)}
             onBlur={(e) => {
-              // Prevent textarea from losing focus when interacting with icons
+              
               if (!e.relatedTarget || !e.relatedTarget.closest(".icon-button")) {
                 setIsFocused(false);
               }
@@ -31,9 +44,20 @@ const PostBox = () => {
                 <button
                   className={`p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 icon-button ${selectedIcon === "image" ? "bg-gray-300 dark:bg-gray-600" : ""
                     }`}
-                  onClick={() => setSelectedIcon("image")}>
-                  {/* <input type="file" /> */}
+                  onClick={() => {
+                    setSelectedIcon("image");
+                    fileInputRef.current.click();
+                  }}
+                >
                   <FaImage size={20} />
+                  {/* Hidden file input */}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleImageChange}
+                  />
                 </button>
                 <button
                   className={`p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 icon-button ${selectedIcon === "code" ? "bg-gray-300 dark:bg-gray-600" : ""
@@ -59,6 +83,15 @@ const PostBox = () => {
                 <FaPaperPlane size={16} />
                 <span>Submit</span>
               </button>
+            </div>
+          )}
+          {image && (
+            <div className="mt-2">
+              <img
+                src={image}
+                alt="Selected preview"
+                className="max-w-full h-auto rounded-lg border border-gray-500"
+              />
             </div>
           )}
         </div>
