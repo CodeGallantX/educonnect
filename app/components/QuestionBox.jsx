@@ -20,17 +20,13 @@ const QuestionBox = () => {
     <div className="bg-gray-900 p-6 rounded-lg shadow-md text-white space-y-4">
       <div className="flex space-x-4 border-b border-gray-700 pb-2">
         <button
-          className={`text-lg font-semibold ${
-            activeTab === 'question' ? 'text-gray-200 border-b-2 border-gray-300' : 'text-gray-400'
-          }`}
+          className={`text-lg font-semibold ${activeTab === 'question' ? 'text-gray-200 border-b-2 border-gray-300' : 'text-gray-400'}`}
           onClick={() => setActiveTab('question')}
         >
           Add Question
         </button>
         <button
-          className={`text-lg font-semibold ${
-            activeTab === 'post' ? 'text-gray-200 border-b-2 border-gray-300' : 'text-gray-400'
-          }`}
+          className={`text-lg font-semibold ${activeTab === 'post' ? 'text-gray-200 border-b-2 border-gray-300' : 'text-gray-400'}`}
           onClick={() => setActiveTab('post')}
         >
           Create Post
@@ -39,21 +35,21 @@ const QuestionBox = () => {
 
       <div className="text-sm text-gray-400">
         {activeTab === 'question' ? (
-          <p>
+          <>
             <strong>Tips for asking good questions:</strong>
             <ul className="list-disc ml-6 mt-2 space-y-1">
               <li>Provide clear and specific details about your problem.</li>
               <li>Keep your question concise and focused on a single topic.</li>
             </ul>
-          </p>
+          </>
         ) : (
-          <p>
+          <>
             <strong>Guidelines for creating posts:</strong>
             <ul className="list-disc ml-6 mt-2 space-y-1">
               <li>Ensure your content is relevant and adds value to the community.</li>
               <li>Use appropriate language and avoid offensive terms.</li>
             </ul>
-          </p>
+          </>
         )}
       </div>
 
@@ -80,9 +76,7 @@ const QuestionBox = () => {
         <button
           onClick={() => setIsPublic(!isPublic)}
           className={`py-1 px-4 rounded-full text-sm font-medium transition ${
-            isPublic
-              ? 'bg-green-600 text-white hover:bg-green-700'
-              : 'bg-red-600 text-white hover:bg-red-700'
+            isPublic ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-red-600 text-white hover:bg-red-700'
           }`}
         >
           {isPublic ? 'Public' : 'Private'}
