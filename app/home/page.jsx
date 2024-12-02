@@ -7,7 +7,7 @@ import RightPane from '../components/RightPane';
 
 const App = () => {
   return (
-    <div className="light:bg-gray-200 dark:bg-gray-800">
+    <div className="bg-gray-800">
       <Header />
       <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-6 px-4 md:px-6 lg:px-10 xl:px-24">
         <div className='hidden md:block lg:hidden xl:block lg:col-span-0'>

@@ -21,7 +21,7 @@ const PostBox = () => {
   };
 
   return (
-    <div className="w-full p-4 rounded-lg light:bg-gray-400 dark:bg-gray-900">
+    <div className="w-full p-4 rounded-lg bg-gray-900">
       <div className="flex items-start space-x-4">
         <ProfilePic className="w-12 h-12" />
         <div className="w-full">
