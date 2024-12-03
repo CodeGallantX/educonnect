@@ -27,7 +27,7 @@ const PostBox = () => {
         <div className="w-full">
           <textarea
             id="postBox"
-            className={`w-full text-sm lg:text-base rounded-md py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all ${isFocused ? "h-32" : "h-12"
+            className={`w-full text-sm md:text-base rounded-md py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all ${isFocused ? "h-32" : "h-12"
               }`}
             placeholder="What do you want to ask or answer?"
             onFocus={() => setIsFocused(true)}

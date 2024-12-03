@@ -44,7 +44,7 @@ const Header = () => {
             <IoGridOutline className="text-2xl" />
           </Link>
         </nav>
-        <div className="flex-grow mx-4 md:mx-6 hidden md:block">
+        <div className="flex-grow mx-4 md:mx-6 hidden lg:block">
           <input
             type="search"
             id="searchBox"
@@ -74,7 +74,7 @@ const Header = () => {
             <PiGlobeBold className="text-gray-400 hover:text-gray-600 hover:text-white text-2xl md:text-2xl" />
           </Link>
         </div>
-        <Link href="/edit-profile" className="outline-none hidden sm:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
+        <Link href="/edit-profile" className="outline-none hidden lg:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
             Edit Profile
         </Link>
       </header>

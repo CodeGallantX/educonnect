@@ -3,7 +3,7 @@
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="flex flex-row items-end justify-between space-x-3">
             
         </footer>
     )
