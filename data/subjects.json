@@ -2,7 +2,7 @@
     {
         "url": "url",
         "thumbnail": "/wallpaper.png",
-        "name": "Maths"
+        "name": "Mathematics"
     },
     {
         "url": "url",
@@ -23,5 +23,15 @@
         "url": "url",
         "thumbnail": "/wallpaper.png",
         "name": "Government"
+    },
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "Creative Art"
+    },
+    {
+        "url": "url",
+        "thumbnail": "/wallpaper.png",
+        "name": "History"
     }
 ]

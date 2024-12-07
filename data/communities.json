@@ -2,31 +2,37 @@
     {
         "url": "url",
         "img": "/wallpaper.png",
-        "name": "Community of Artists"
+        "name": "Community of Artists",
+        "description": "The Arts community is a vibrant collective where students who are passionate about arts and creative expression come together to share ideas."
     },
     {
         "url": "url",
         "img": "/wallpaper.png",
-        "name": "WAEC Preps Community"
+        "name": "WAEC Preps Community",
+        "description": "A supportive community for students preparing for the WASSCE, where they can share resources, tips, and succeed together."
     },
     {
         "url": "url",
         "img": "/wallpaper.png",
-        "name": "Mathematicians of Tomorrow"
+        "name": "Mathematicians of Tomorrow",
+        "description": "A community for future mathematicians to collaborate, solve problems, and share innovative approaches to complex mathematical challenges."
     },
     {
         "url": "url",
         "img": "/wallpaper.png",
-        "name": "JavaScript Titans"
+        "name": "JavaScript Titans",
+        "description": "An active community of JavaScript enthusiasts and developers exploring the latest frameworks, tools, and best practices in web development."
     },
     {
         "url": "url",
         "img": "/wallpaper.png",
-        "name": "Mobile Dev Association"
+        "name": "Mobile Dev Association",
+        "description": "A dedicated space for aspiring mobile app developers to learn, network, and build groundbreaking mobile applications together."
     },
     {
         "url": "url",
         "img": "/wallpaper.png",
-        "name": "Young Einsteins"
+        "name": "Young Einsteins",
+        "description": "A community fostering curiosity and innovation, where students passionate about science and research collaborate on exciting projects."
     }
 ]
