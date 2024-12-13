@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+"use client";
 import { MdCheckCircle } from 'react-icons/md';
 import { BiSolidBoltCircle } from "react-icons/bi";
 
@@ -37,11 +36,11 @@ const ProAdvertisement = () => {
                     </ul>
                 </div>
                 <p className="text-sm">Offer valid for a limited time only.</p>
-                <Link href="#" className="text-white flex flex-row items-center justify-center space-x-1 mt-2 py-2 w-full px-6 bg-primary rounded-lg font-medium hover:bg-green-500 transition-all duration-300
+                <a href="#" className="text-white flex flex-row items-center justify-center space-x-1 mt-2 py-2 w-full px-6 bg-primary rounded-lg font-medium hover:bg-green-500 transition-all duration-300
                 ">
                     <BiSolidBoltCircle className="text-xl" />
                     <span className="text-sm">Upgrade Now</span>
-                </Link>
+                </a>
             </div>
         </div>
     );

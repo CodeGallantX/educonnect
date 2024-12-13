@@ -1,9 +1,9 @@
 const BadgesBox = ({ badges }) => {
     return (
-        <div className="w-full max-w-2xl mx-auto rounded-lg shadow-md p-6">
+        <div className="w-full max-w-2xl mx-auto py-6 px-0 md:p-6">
             <h2 className="text-xl font-semibold text-white mb-4 border-b border-b-gray-600 pb-2">Badges</h2>
             {badges.length > 0 ? (
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                     {badges.map((badge, index) => (
                         <div
                             key={index}

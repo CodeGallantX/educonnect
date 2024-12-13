@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import ProfilePic from "./ProfilePic";
 import { FaImage, FaCode, FaMarkdown, FaPaperPlane } from "react-icons/fa";
 
@@ -27,7 +27,7 @@ const PostBox = () => {
         <div className="w-full">
           <textarea
             id="postBox"
-            className={`w-full text-sm md:text-base rounded-md py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all ${isFocused ? "h-32" : "h-12"
+            className={`w-full text-[12px] sm:text-sm md:text-base rounded-md pt-1.5 sm:py-2 px-4 text-gray-100 bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all ${isFocused ? "h-32" : "h-12"
               }`}
             placeholder="What do you want to ask or answer?"
             onFocus={() => setIsFocused(true)}
@@ -40,9 +40,9 @@ const PostBox = () => {
           ></textarea>
           {isFocused && (
             <div className="flex justify-between items-center mt-2">
-              <div className="flex space-x-4 light:text-gray-500 dark:text-white">
+              <div className="flex space-x-4 text-white">
                 <button
-                  className={`p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 icon-button ${selectedIcon === "image" ? "bg-gray-300 dark:bg-gray-600" : ""
+                  className={`p-2 rounded-full hover:bg-gray-300 hover:bg-gray-600 icon-button ${selectedIcon === "image" ? "bg-gray-300 bg-gray-600" : ""
                     }`}
                   onClick={() => {
                     setSelectedIcon("image");
@@ -59,15 +59,15 @@ const PostBox = () => {
                   />
                 </button>
                 <button
-                  className={`p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 icon-button ${selectedIcon === "code" ? "bg-gray-300 dark:bg-gray-600" : ""
+                  className={`p-2 rounded-full hover:bg-gray-300 hover:bg-gray-600 icon-button ${selectedIcon === "code" ? "bg-gray-300 bg-gray-600" : ""
                     }`}
                   onClick={() => setSelectedIcon("code")}
                 >
                   <FaCode size={20} />
                 </button>
                 <button
-                  className={`p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 icon-button ${selectedIcon === "markdown"
-                    ? "bg-gray-300 dark:bg-gray-600"
+                  className={`p-2 rounded-full hover:bg-gray-300 hover:bg-gray-600 icon-button ${selectedIcon === "markdown"
+                    ? "bg-gray-300 bg-gray-600"
                     : ""
                     }`}
                   onClick={() => setSelectedIcon("markdown")}
@@ -76,7 +76,7 @@ const PostBox = () => {
                 </button>
               </div>
               <button
-                className="icon-button flex items-center space-x-2 bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark"
+                className="icon-button flex items-center space-x-2 bg-primary text-white py-2 px-4 rounded-md"
                 onClick={() => alert("Post submitted")}
               >
                 <FaPaperPlane size={16} />

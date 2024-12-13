@@ -1,23 +1,29 @@
-import React from 'react'
-import Link from 'next/link';
+"use client";
+// import { useNavigate } from 'react-router-dom'
 import CommunityCard from './CommunityCard'
 import { FaPlusCircle } from 'react-icons/fa'
 
 const LeftPane = () => {
+  
+// const navigate = useNavigate();
+
   return (
     <div className="flex-col items-start justify-center w-full space-y-5">
-        <Link href="/create-community" className="flex flex-row space-x-2 items-center justify-center text-white light:bg-gray-500 dark:bg-gray-900 py-2 px-3 rounded-full w-full">
+        <a href="/community" className="flex flex-row space-x-2 items-center justify-center text-white bg-gray-900 py-2 px-3 rounded-full w-full">
                 <FaPlusCircle className="text-lg inline-block"/>
                 <span className='text-sm'>Create community</span>
-        </Link>
+        </a>
         <div>
           <CommunityCard />
         </div>
         <div className='flex flex-col items-start justify-center text-sm text-white space-y-2'>
-          <Link href="#">About us</Link>
-          <Link href="#">Terms of Use</Link>
-          <Link href="#">Privacy Policy</Link>
-          <Link href="#">Settings</Link>
+          <a href="#">About us</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Settings</a>
+          <button 
+          // onClick={() => navigate('/')}
+          >Log out</button>
         </div>
         <div>
           <p className='text-sm text-white mt-auto'>© 2024 EduConnect. All rights reserved.</p>

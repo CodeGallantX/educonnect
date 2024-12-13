@@ -63,7 +63,7 @@ const ProfileTabs = () => {
     };
 
     return (
-        <div className="w-full max-w-3xl mx-auto bg-gray-800 rounded-lg shadow-md">
+        <div className="w-full max-w-3xl mx-auto rounded-lg">
             <div className="flex border-b border-gray-600">
                 {Object.keys(tabContent).map((tab) => (
                     <button

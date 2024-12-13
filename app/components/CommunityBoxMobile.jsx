@@ -12,7 +12,7 @@ const LeftPane = () => {
                 <FaPlusCircle className="text-lg inline-block"/>
                 <span className='text-sm'>Create community</span>
         </a>
-        <a href="#suggestedCommunities" className="text-center text-white bg-transparent border border-gray-500 py-2 px-3 rounded-full">
+        <a href="#discoveredCommunities" className="text-center text-white bg-transparent border border-gray-500 py-2 px-3 rounded-full">
                 <span className='text-sm'>Discover communities</span>
         </a>
     </div>

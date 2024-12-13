@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import questions from "/data/questions.json";
+import { useState } from "react";
+import questions from "../../data/questions.json";
 import { PiArrowFatUpBold, PiArrowFatDownBold } from "react-icons/pi";
 import { FaRegComments, FaArrowUpFromBracket } from "react-icons/fa6";
 

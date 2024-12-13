@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import ProfilePic from "./ProfilePic";
-import NotificationPane from "./NotificationPane"; // Import the NotificationPane component
+import NotificationPane from "./NotificationPane";
 import { FaRegBell } from "react-icons/fa6";
 import { PiHouseBold, PiNotePencilBold, PiGlobeBold } from "react-icons/pi";
 import { IoGridOutline } from "react-icons/io5";
@@ -25,24 +24,24 @@ const Header = () => {
           />
         </div>
         <nav className="hidden sm:flex space-x-6 ml-auto">
-          <Link
+          <a
             href="/home"
             className="text-gray-400 hover:text-gray-600 hover:text-white"
           >
             <PiHouseBold className="text-2xl" />
-          </Link>
-          <Link
+          </a>
+          <a
             href="/post"
             className="text-gray-400 hover:text-gray-600 hover:text-white"
           >
             <PiNotePencilBold className="text-2xl" />
-          </Link>
-          <Link
+          </a>
+          <a
             href="/community"
             className="text-gray-400 hover:text-gray-600 hover:text-white"
           >
             <IoGridOutline className="text-2xl" />
-          </Link>
+          </a>
         </nav>
         <div className="flex-grow mx-4 md:mx-6 hidden lg:block">
           <input
@@ -53,7 +52,9 @@ const Header = () => {
           />
         </div>
         <div className="flex flex-row-reverse lg:flex-row items-center justify-center space-x-6">
+          <a href="/profile">
           <ProfilePic />
+          </a>
           <div className="relative">
             <button
               onClick={toggleNotificationPane}
@@ -70,13 +71,13 @@ const Header = () => {
               </div>
             )}
           </div>
-          <Link href="/community">
+          <a href="/community">
             <PiGlobeBold className="text-gray-400 hover:text-gray-600 hover:text-white text-2xl md:text-2xl" />
-          </Link>
+          </a>
         </div>
-        <Link href="/edit-profile" className="outline-none hidden lg:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
+        <a href="/profile" className="outline-none hidden lg:block py-3 px-4 md:px-7 bg-primary text-white text-sm font-medium rounded-full transition outline-none">
             Edit Profile
-        </Link>
+        </a>
       </header>
     </>
   );

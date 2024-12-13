@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 
 const QuestionBox = () => {
@@ -53,7 +53,6 @@ const QuestionBox = () => {
         )}
       </div>
 
-      {/* Input Box with Send Icon */}
       <div className="relative">
         <textarea
           rows="3"

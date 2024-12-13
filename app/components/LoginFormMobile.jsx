@@ -1,89 +1,100 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaAngleLeft } from "react-icons/fa6";
 
 const App = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    agree: false,
+    userEmail: '',
+    userPassword: '',
   });
+  const [errorMessage, setErrorMessage] = useState('');
+  // const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    const { userEmail, userPassword } = formData;
+
+    // Mock authentication logic
+    if (userEmail === 'test@mail.com' && userPassword === 'password123') {
+      setErrorMessage('');
+      // navigate('/home');
+    } else {
+      setErrorMessage('Invalid email or password. Please try again.');
+    }
   };
 
   return (
     <div className='light:bg-gray-200 dark:bg-gray-800 w-full min-h-screen'>
       <div className="flex flex-col space-y-3 px-10 md:px-16 lg:px-10 xl:px-32 py-16 lg:py-8">
         <div className="mb-6 light:text-gray-800 dark:text-white">
-        <h1 className='text-3xl font-bold text-left'>Welcome back! Continue your Learning Journey</h1>
+          <h1 className='text-3xl font-bold text-left'>Welcome back! Continue your Learning Journey</h1>
         </div>
 
-        <Link href="/">
-            <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold"/>
-        </Link>
+        <a href="/">
+          <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold" />
+        </a>
 
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
-
           <fieldset className="flex flex-col items-start justify-center space-y-1">
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="userEmail">Email Address</label>
             <input
               className="w-full border border-solid p-4 rounded-lg border-gray-500 light:bg-gray-200 dark:bg-gray-800 outline-none light:focus:border-primary dark:focus:border-gray-300 transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="email"
-              name="email"
-              id="email"
+              name="userEmail"
+              id="userEmail"  
               placeholder='Enter your email address'
-              value={formData.email}
+              value={formData.userEmail} 
               onChange={handleChange}
               required
             />
           </fieldset>
           <fieldset className="flex flex-col items-start justify-center space-y-1">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="userPassword">Password</label>
             <input
               className="w-full placeholder:text-2xl font-light border border-solid p-4 rounded-lg light:bg-gray-200 dark:bg-gray-800 border-gray-500 outline-none light:focus:border-primary dark:focus:border-gray-300 primary transition-all duration-300 ease-in-out light:text-gray-800 dark:text-white"
               type="password"
-              name="password"
-              id="password"
+              name="userPassword" 
+              id="userPassword"  
               placeholder='⁎⁎⁎⁎⁎⁎⁎⁎'
-              value={formData.password}
+              value={formData.userPassword}
               onChange={handleChange}
               required
             />
           </fieldset>
 
-          <Link href="/forgot-password" className='underline text-right text-sm'>Forgot password?</Link>
+          {errorMessage && <p className="text-red-500 text-sm">{errorMessage}</p>}
+
+          <a href="/forgot-password" className='underline text-right text-sm'>Forgot password?</a>
           
-          <Link href="/home">
-            <button className='mt-2 w-full bg-primary text-white py-3 rounded-lg' type="submit">
-              Sign in
-            </button>
-          </Link>
+          <button
+            className='mt-2 w-full bg-primary text-white py-3 rounded-lg'
+            type="submit"
+          >
+            Sign in
+          </button>
         </form>
 
         <div className="mt-4 pt-10 flex flex-col space-y-3">
           <div className="flex flex-row items-center justify-center space-x-6">
-            <Link href="#">
-              <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={22} height={22} />
-            </Link>
-            <Link href="#">
-              <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Apple_logo_grey.svg.png?updatedAt=1727884280423" alt="Apple Icon" width={22} height={22} />
-            </Link>
+            <a href="#">
+              <img src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" className='w-5 h-5' />
+            </a>
+            <a href="#">
+              <img src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Apple_logo_grey.svg.png?updatedAt=1727884280423" alt="Apple Icon" className='w-5 h-5' />
+            </a>
           </div>
-          <p className="text-center light:text-gray-800 dark:text-white">Don&apos;t have an account yet? {" "}
+          <p className="text-center light:text-gray-800 dark:text-white">
+            Don&apos;t have an account yet?{" "}
             <Link href="/register" className='font-bold underline'>Sign up</Link>
           </p>
         </div>

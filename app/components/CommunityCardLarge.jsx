@@ -6,7 +6,7 @@ const CommunityCard = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4 border-b border-gray-500 py-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-4  py-2"> {/*border-b border-gray-500*/}
       {communities.slice(0, 4).map((community, index) => (
         <div key={index}>
           <a

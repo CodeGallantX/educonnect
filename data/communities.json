@@ -1,13 +1,13 @@
 [
     {
         "url": "url",
-        "img": "/wallpaper.png",
+        "img": "https://img.freepik.com/free-photo/side-view-artist-holding-paint-palette_23-2150170497.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Community of Artists",
         "description": "The Arts community is a vibrant collective where students who are passionate about arts and creative expression come together to share ideas."
     },
     {
         "url": "url",
-        "img": "/wallpaper.png",
+        "img": "https://upload.wikimedia.org/wikipedia/en/d/d9/Waec_logo.png",
         "name": "WAEC Preps Community",
         "description": "A supportive community for students preparing for the WASSCE, where they can share resources, tips, and succeed together."
     },
@@ -19,19 +19,19 @@
     },
     {
         "url": "url",
-        "img": "/wallpaper.png",
+        "img": "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept-bright-vibrant-violet-isolated-illustration_335657-986.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "JavaScript Titans",
         "description": "An active community of JavaScript enthusiasts and developers exploring the latest frameworks, tools, and best practices in web development."
     },
     {
         "url": "url",
-        "img": "/wallpaper.png",
+        "img": "https://img.freepik.com/free-photo/representations-user-experience-interface-design_23-2150104507.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Mobile Dev Association",
         "description": "A dedicated space for aspiring mobile app developers to learn, network, and build groundbreaking mobile applications together."
     },
     {
         "url": "url",
-        "img": "/wallpaper.png",
+        "img": "https://img.freepik.com/free-vector/albert-einstein-s-mass-energy-equivalence-formula_1308-81580.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Young Einsteins",
         "description": "A community fostering curiosity and innovation, where students passionate about science and research collaborate on exciting projects."
     }

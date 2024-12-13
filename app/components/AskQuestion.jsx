@@ -5,13 +5,21 @@ import { FaPaperPlane } from 'react-icons/fa';
 const QuestionBox = () => {
   const [activeTab, setActiveTab] = useState('question');
   const [isPublic, setIsPublic] = useState(true);
-  const [content, setContent] = useState('');
+  const [description, setDescription] = useState('');
+  const [subject, setSubject] = useState('');
+  const [topic, setTopic] = useState('');
 
   const handleSubmit = () => {
-    if (content.trim()) {
-      console.log(`Submitted: ${content}`);
-      setContent('');
-    } else {
+    if (topic.trim() && description.trim()) {
+      console.log(`Topic: ${topic}`);
+      console.log(`Subject: ${subject}`);
+      console.log(`Description: ${description}`);
+      setTopic('');
+      setSubject('');
+      setDescription('');
+      alert('Question posted successfully!!')
+    }
+    else {
       alert('Please enter some text before submitting!');
     }
   };
@@ -27,22 +35,29 @@ const QuestionBox = () => {
       </div>
 
 
-      <div className="relative space-y-4">
+      <form onSubmit={handleSubmit} className="relative space-y-4">
         <fieldset className="space-y-1">
           <label className="text-gray-300 font-semibold">Topic <span className="text-red-500 font-bold">*</span></label>
-          <input required type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"/>
+          <input 
+            type="text" 
+            value={topic}
+            onChange={(e) => setTopic(e.target.value)}
+            className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-100 bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all"/>
         </fieldset>
         <fieldset className="space-y-1">
           <label className="text-gray-300 font-semibold">Subject </label>
-          <input type="text" className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-800 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 light:focus:ring-primary dark:focus:ring-gray-300 transition-all"/>
+          <input 
+            type="text" 
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            className="w-full text-[12px] sm:text-sm rounded-md pt-1.5 sm:py-2 px-4 text-gray-100 bg-gray-800 border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 transition-all"/>
         </fieldset>
         <fieldset className="space-y-1">
           <label className="text-gray-300 font-semibold">Description <span className="text-red-500 font-bold">*</span></label>
         <textarea
           rows="3"
-          required
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
           placeholder='Ask your question here...'
           className="w-full bg-gray-800 rounded-md p-4 text-white text-sm border border-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-200 pr-10"
           />
@@ -54,7 +69,7 @@ const QuestionBox = () => {
         >
           <FaPaperPlane className="text-base" />
         </button>
-      </div>
+      </form>
 
       <div className="flex items-center justify-between">
         <span className="text-gray-400">Visibility:</span>

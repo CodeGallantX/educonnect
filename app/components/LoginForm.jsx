@@ -1,13 +1,17 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import Link from 'next/link';
-import Image from 'next/image';
+
 const App = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     agree: false,
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  // const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -17,10 +21,28 @@ const App = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    setError('');
+
+    if (!formData.email || !formData.password) {
+      setError('Please fill in all required fields.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    // Simulate API call
+    setTimeout(() => {
+      setIsLoading(false);
+
+      if (formData.email === 'test@mail.com' && formData.password === 'password123') {
+        console.log('Login successful!');
+        // navigate('/home');
+      } else {
+        setError('Invalid email or password. Please try again.');
+      }
+    }, 2000);
   };
 
   return (
@@ -29,11 +51,10 @@ const App = () => {
         <h1 className='text-4xl font-bold text-center'>Login</h1>
         <p className="text-gray-300 text-center">Join the community and unlock your learning potential</p>
 
-
         <div className='mt-4 w-full'>
           <div className="flex flex-col items-center justify-center space-y-4">
             <a href="#" className="w-full flex flex-row items-center justify-center space-x-2 hover:bg-gray-800 px-2 py-3 rounded-full bg-transparent border border-solid border-blue-500">
-              <Image src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" width={20} height={20} />
+              <img src="https://ik.imagekit.io/mshcgnjju/EkoStudy/Google-icon.png" alt="Google Icon" className="w-5 h-5" />
               <span>Sign in with Google</span>
             </a>
           </div>
@@ -45,6 +66,10 @@ const App = () => {
         </div>
 
         <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4 mt-4'>
+          {error && (
+            <p className="text-red-500 text-center">{error}</p>
+          )}
+
           <fieldset className="flex flex-col items-start justify-center w-full space-y-1">
             <label className='text-white' htmlFor="email">Email Address</label>
             <input
@@ -72,21 +97,30 @@ const App = () => {
             />
           </fieldset>
 
-          <button className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full' type="submit">
-            <Link href="/home">
-              Log in
-            </Link>
+          <button
+            className='mt-2 w-full bg-primary text-white transition duration-300 ease-out py-3 rounded-full'
+            type="submit"
+            disabled={isLoading}
+          >
+            {isLoading ? "Logging in..." : "Log in"}
           </button>
+
           <p className="text-white">Don&apos;t have an account? <Link href="/register" className='font-bold underline transition duration-300 ease-in-out'>Sign up</Link></p>
         </form>
-
       </div>
-      <div className='hidden overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full bg-gradient-to-tr from-cyan-800 to-purple-900'>
-        <div className='absolute bottom-0 w-full opacity-40 h-2/5 bg-black blur'></div>
-        <div className='absolute text-white w-full bottom-1/4 left-1/2 -translate-x-1/2'>
-          <div className="flex flex-col space-y-4 items-center text-center px-8">
-            <h1 className="text-4xl text-white">Ask Questions with Ease</h1>
-            <p className="text-xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</p>
+      <div className='p-3'>
+        <div className='hidden rounded-lg overflow-hidden lg:block ml-auto lg:w-5/6 xl:w-11/12 relative h-full'>
+          <div className='absolute bottom-0 w-full opacity-60 h-2/5 bg-black blur'></div>
+          <img 
+            className="object-cover w-full h-full" 
+            src="https://media.istockphoto.com/id/1307457224/photo/happy-black-student-raising-arm-to-answer-a-questing-in-the-classroom.jpg?s=612x612&w=0&k=20&c=2Z9Q7SE49Xjp3On0SDo20km15bwrifyWdlAMviLuP5I=" 
+            alt="Classroom" 
+          />
+          <div className='absolute text-white w-full bottom-1/4 translate-y-10 left-1/2 -translate-x-1/2'>
+            <div className="flex flex-col space-y-4 items-center text-center px-8">
+              <h1 className="text-4xl text-white font-medium">Ask Questions with Ease</h1>
+              <p className="text-xl">Post questions in any subject and get clear, reliable answers from students and contributors. Learning starts with a single question.</p>
+            </div>
           </div>
         </div>
       </div>

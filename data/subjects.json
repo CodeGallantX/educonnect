@@ -1,37 +1,37 @@
 [
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/free-photo/flat-lay-school-supplies-assortment_23-2148913519.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Mathematics"
     },
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/free-photo/english-book-notebook-high-angle_23-2149440506.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "English"
     },
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/free-vector/biology-concept-with-retro-science-cartoon-icons-set_1284-7504.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Biology"
     },
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/free-vector/chemistry-science-concept_1284-11674.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Chemistry"
     },
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/free-psd/3d-rendering-judge-character_23-2151124869.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Government"
     },
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/free-photo/still-life-drawing-tools_23-2149371275.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "Creative Art"
     },
     {
         "url": "url",
-        "thumbnail": "/wallpaper.png",
+        "thumbnail": "https://img.freepik.com/premium-vector/history-textbook-outline-science-school-symbols_8071-50110.jpg?uid=R101644944&ga=GA1.1.2091260300.1731888325&semt=ais_hybrid",
         "name": "History"
     }
 ]
