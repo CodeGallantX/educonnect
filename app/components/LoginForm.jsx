@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  // const navigate = useNavigate();
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -38,7 +38,7 @@ const App = () => {
 
       if (formData.email === 'test@mail.com' && formData.password === 'password123') {
         console.log('Login successful!');
-        // navigate('/home');
+        router.push('/home');
       } else {
         setError('Invalid email or password. Please try again.');
       }
@@ -65,6 +65,7 @@ const App = () => {
           </div>
         </div>
 
+        
         <form onSubmit={handleSubmit} className='flex flex-col space-y-3 lg:space-y-4 mt-4'>
           {error && (
             <p className="text-red-500 text-center">{error}</p>

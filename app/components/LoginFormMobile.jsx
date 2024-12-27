@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { FaAngleLeft } from "react-icons/fa6";
 
@@ -10,7 +10,7 @@ const App = () => {
     userPassword: '',
   });
   const [errorMessage, setErrorMessage] = useState('');
-  // const navigate = useNavigate();
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +27,7 @@ const App = () => {
     // Mock authentication logic
     if (userEmail === 'test@mail.com' && userPassword === 'password123') {
       setErrorMessage('');
-      // navigate('/home');
+      router.push('/home');
     } else {
       setErrorMessage('Invalid email or password. Please try again.');
     }
@@ -44,6 +44,8 @@ const App = () => {
           <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold" />
         </a>
 
+        <span className="text-gray-600"><strong>Email:</strong>test@mail.com</span>
+        <span className="text-gray-600"><strong>Password:</strong>password123</span>
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-3 lg:space-y-4 mt-10'>
           <fieldset className="flex flex-col items-start justify-center space-y-1">
             <label htmlFor="userEmail">Email Address</label>
