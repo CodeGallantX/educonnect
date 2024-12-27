@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ const App = () => {
   });
 
 
-  // const navigate = useNavigate();
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -31,7 +31,7 @@ const App = () => {
 
     console.log('Form submitted successfully:', formData);
     alert('Registration successful! Login to the access the community.');
-    // navigate('/login')
+    router.push('/login')
   };
 
   return (

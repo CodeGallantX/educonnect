@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 import { FaAngleLeft } from "react-icons/fa6";
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -40,7 +41,7 @@ const App = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Form submitted successfully:", formData);
-      navigate('/email-verification')
+      router.push('/email-verification')
     }
   };
 
@@ -51,9 +52,9 @@ const App = () => {
           Register To Start Your Journey To EduConnect Today
         </h1>
 
-        <a href="/">
+        <Link href="/">
           <FaAngleLeft className="absolute left-8 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold" />
-        </a>
+        </Link>
 
         <form onSubmit={handleSubmit} className='flex flex-col light:text-gray-800 dark:text-white space-y-4 mt-4'>
           <fieldset className="flex flex-col w-full items-start justify-center space-y-1">

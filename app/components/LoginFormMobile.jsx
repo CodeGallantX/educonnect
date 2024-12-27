@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { FaAngleLeft } from "react-icons/fa6";
 
@@ -40,7 +41,7 @@ const App = () => {
           <h1 className='text-3xl font-bold text-left'>Welcome back! Continue your Learning Journey</h1>
         </div>
 
-        <a href="/">
+        <Link href="/">
           <FaAngleLeft className="absolute left-9 top-5 p-2 light:bg-gray-500 dark:bg-gray-700 rounded-full text-4xl light:text-gray-500 dark:text-white font-bold" />
         </a>
 
