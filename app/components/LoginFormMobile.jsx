@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { FaAngleLeft } from "react-icons/fa6";
 
 const App = () => {
